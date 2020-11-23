@@ -2,6 +2,8 @@
 
 let lang = prompt("Введите ru или en");
 let arr = [];
+let namePerson = prompt("Выберите Артем или Максим?");
+
     if (lang === "ru") {
         arr = ["Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье"];
     }
@@ -22,8 +24,8 @@ console.log(arr);
     "ru":["Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье"],
     "en":["Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"]
 };
-console.log(arr[lang]);
 
- let namePerson = prompt("Выберите Артем или Максим?");
- namePerson = namePerson === "Артем" ? console.log('Директор') : namePerson === "Максим" ? 
+    namePerson = namePerson === "Артем" ? console.log('Директор') : namePerson === "Максим" ? 
     console.log("Преподаватель") : console.log('Студент');
+    
+console.log(arr[lang]);
