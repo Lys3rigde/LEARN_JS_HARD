@@ -9,3 +9,4 @@ function edit(b){
     b = b.trim();
     return b.length > 30 ? b.slice(0,30) + '...' : b;
 }
+alert(edit(b));
