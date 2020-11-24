@@ -1,5 +1,6 @@
 'use strict';
 
+let b = prompt("Введите строчное значение");
 function edit(b){
     if (typeof b !== 'string'){
         alert("значение не является строкой");
