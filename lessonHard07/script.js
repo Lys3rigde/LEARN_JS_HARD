@@ -1,17 +1,18 @@
 "use strict";
+let week = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'],
+  today = new Date().getDay() - 1;
 
-let arr = ['29', '291', '420', '322', '82', '726', '400'];
-arr.forEach((item) => {
-  if (item.startsWith('2') || item.startsWith('4')) {
-    console.log(item);
+for (let i = 0; i < week.length; i++) {
+  if (i === today) {
+    if (week[i] === 'суббота' || week[i] === 'воскресенье') {
+      document.write(`<p><b><i>${week[i]}</i></b></p>`);
+    } else {
+      document.write(`<p><b>${week[i]}</b></p>`);
+    }
+  } else if (week[i] === 'суббота' || week[i] === 'воскресенье') {
+    document.write(`<p><i>${week[i]}</i></p>`);
+  } else {
+    document.write(`<p>${week[i]}</p>`);
   }
-});
-
-function prime(n){
-    for (let i = 2; i * i <= n; i === 2 ? i++ : i += 2) if (n % i === 0) return false;
-    return n > 1;
-  }
-  
-  const res = [...Array(101)].reduce((a, _, i) =>
-   a.concat(prime(i) ? `${i}: 1 и ${i}` : []) , []).join('\n');
-  console.log(res);
+}
+console.log(week);
